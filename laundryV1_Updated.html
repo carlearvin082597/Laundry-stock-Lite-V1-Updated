@@ -17,11 +17,16 @@ body {
   font-family: "Segoe UI", sans-serif;
   background-color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
   color: #333;
+}
+
+main {
+  flex: 1; /* take up available space */
 }
 
 .container {
@@ -209,6 +214,7 @@ th, td {
 }
 
 th {
+  position: sticky;
   background-color: #f0f0f0;
   font-weight: bold;
 }
@@ -410,6 +416,7 @@ footer p {
   </style>
 </head>
 <body>
+<main>
 <div class="container">
     <header>
     <h1>LaundryStock Lite 🧺📦</h1>
@@ -450,6 +457,7 @@ footer p {
     </div>
   </div>
 </div>
+</main>
   <!-- Privacy Modal -->
   <dialog id="privacyModal">
 	<h3>Privacy Policy</h3>
