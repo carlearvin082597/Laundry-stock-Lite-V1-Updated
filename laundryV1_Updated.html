@@ -26,7 +26,11 @@ body {
 }
 
 main {
-  flex: 1; /* take up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .container {
@@ -449,7 +453,21 @@ footer p {
   <div id="modal" class="hidden">
     <div class="modal-content">
       <h3>Add New Item</h3>
-      <input type="text" id="itemNameInput" placeholder="Item name" />
+      <input list="itemList" type="text" id="itemNameInput" placeholder="Item name" />
+	      <datalist id="itemList">
+	        <option value="Detergent"></option>
+	        <option value="Fabric Softener"></option>
+	        <option value="Bleach"></option>
+	        <option value="Stain Remover"></option>
+	        <option value="Laundry Bags"></option>
+	        <option value="Dryer Sheets"></option>
+	        <option value="Washing Powder"></option>
+	        <option value="Oxygen Bleach"></option>
+	        <option value="Color Catchers"></option>
+	        <option value="Lint Rollers"></option>
+	        <option value="Wool Dryer Balls"></option>
+	        <option value="Ironing Spray"></option>
+	      </datalist>
       <input type="number" id="itemQtyInput" placeholder="Quantity" />
       <button id="saveItemBtn">Save</button>
       <button id="closeModalBtn">Cancel</button>
